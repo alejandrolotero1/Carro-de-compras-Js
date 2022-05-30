@@ -11,29 +11,37 @@
 <body>
 <nav class="navIndex">
   <h1>AlViajar</h1>
-  <!-- Este Select se debe renderizar por Javascript consumiendo el objeto -->
 </nav>
+
 <nav class="navIndexV2">
-
+  <button id="buttonModalClass" class="buttonStyle">Tu carro de compras</button>
+  <button id="buttonModalClose" class="buttonStyle">Inicio</button>
 </nav>
-<section class="contentIndexCards">
-  <div class="cardDefaulds">
-    <h2 class="titleCardsDefauld">Nuestros productos</h2>
-  </div>
-  <div class="contentCards" id="contentCards">
-    <div class="selectOptionPanel">
-      <select name="" id="select-products">
-        <option value="">Select one option</option>
-      </select>
-      <button id="buttonModalClass" class="buttonImageContent"><img class="buttonCardBuy" src="/Images/autoCard.png" alt=""></button>
-    </div>
-  </div>
-</section>
 
-<div class="modal">
-  <div class="shopingCardTitle"><h2>Tu carro de compras</h2></div>
+<div id="modal">
+  <div class="shopingCardTitle"><h2>Tu carro de compras</h2>
+  </div>
   <main id="containerCards"></main>
 </div>
+
+<section class="contentEverything" id="inicio">
+  <div class="contentIndexCards"  >
+      <div class="cardDefaulds">
+        <h2 class="titleCardsDefauld">Nuestros productos</h2>
+      </div>
+      <div class="contentCards" id="contentCards">
+        <div class="selectOptionPanel">
+          <select name="" id="select-products">
+            <option value="">Select one option</option>
+          </select>
+        </div>
+      </div>
+  </div>
+<!-------------------------------------------------------------------------------->
+</section>
+
+
+
 
 
 

@@ -1,16 +1,25 @@
 const selectProducts = document.getElementById("select-products");
 const mainCard = document.getElementById("containerCards");
-const buttonModal = document.getElementById("buttonModalClass")
-/*-------------------------------------------------*/
+
+
+/*------------------------Modal-------------------------*/
+const buttonModalOpen = document.getElementById("buttonModalClass")
+const buttonModalClose = document.getElementById("buttonModalClose");
+const modalContainer = document.getElementById("modal");
+const inicioContainer = document.getElementById("inicio")
+
+function buttonModal1(){
+  modalContainer.style.display ='block'
+  inicioContainer.style.display ="none"
+  }
+function buttonModal2(){
+  modalContainer.style.display ="none"
+  inicioContainer.style.display ="block"
+}
+buttonModalOpen.addEventListener("click",buttonModal1);
+buttonModalClose.addEventListener("click",buttonModal2);
+/*---------------------Almacenar valores----------------------------*/
 let priceProductCant = [];
-// function sumaTotalProductos(var1, var2){
-//   // return priceProductCant.push(var1),priceProductCant.push(var2);
-//   return var1 * var2;
-// }
-
-// import {fruits} from "./products.js"
-// import {fruitsName} from "./products.js"
-
 /*--------------------------------------------*/
 window.addEventListener('load', listSelect);
 selectProducts.addEventListener('change', renderCards);
@@ -18,9 +27,7 @@ let option = document.getElementById("select-products")
 
 function renderCards() {
 fruits.map(fruits => fruits.product === selectProducts.value ? createCards(fruits) : null)
-
-  }
-
+}
 
 function listSelect() {
   fruitsName.map(function(product){
@@ -29,7 +36,6 @@ function listSelect() {
   selectProducts.appendChild(element);
   })
 }
-
 
 const agregar = () => {
   option = document.createElement("value");
@@ -42,7 +48,7 @@ agregar();
 function createCards(fruits) {
   const {product, image,id,price} = fruits;
 
-
+  //AUXILIAR PARA EL PRECIO
   productPrice = price;
   //Contenedor imagen
   let cardImg =document.createElement("div");
@@ -59,7 +65,6 @@ function createCards(fruits) {
   //Image
   let imgCard = document.createElement("img");
   imgCard.setAttribute("src",image);
-  // imgCard.setAttribute("alt",`${id}-${product}`);
   imgCard.classList.add("imgProduct");
 
   //Nombre de la carta
@@ -90,6 +95,7 @@ function createCards(fruits) {
   let resultPriceText = document.createElement("p");
   resultPriceText.classList.add("textPriceProduct");
 //botton confirmar pedido
+/*
   let bottonResultTotal = document.createElement("button");
   bottonResultTotal.classList.add("bottonResultTotal");
   bottonResultTotal.textContent ="Fijar";
@@ -97,8 +103,9 @@ function createCards(fruits) {
   let bottonResultCancel = document.createElement("button");
   bottonResultCancel.classList.add("bottonResultCancel");
   bottonResultCancel.textContent ="Cancelar";
+  */
 
-/*-------Arrray suma de precios---------*/
+/*
 const bottonResultEverything = (var1) =>{
   priceProductCant.unshift(var1);
 
@@ -110,7 +117,7 @@ const bottonResultEverything = (var1) =>{
 
 }
 bottonResultTotal.addEventListener('click',bottonResultEverything);
-/*----------------------------------------------*/
+
 cantProduct.addEventListener ('keyup',event =>{
   if(event){
     let valuePrice = event.target.value;
@@ -123,22 +130,12 @@ cantProduct.addEventListener ('keyup',event =>{
     else{
       textWatch = 0;
     }
-/*--------------------Evento botton--------------------*/
   resultPriceText.textContent =`el precio es de ${textWatch}`;
   resultPrice.appendChild(resultPriceText);
   bottonResultEverything(textWatch);
-
-
-  // //evento fijar precio
-  // bottonResultTotal.addEventListener('click',event =>{
-  // if(event){
-  // priceProductCant.unshift(textWatch);
-  // console.log(priceProductCant);
-  // }
-  // })
 }
 });
-
+*/
 
 /*----------------Valor total-------------------*/
   let resultPriceEverything = document.createElement("div");
@@ -169,9 +166,9 @@ cantProduct.addEventListener ('keyup',event =>{
   cardContent.appendChild(cardImg);
   cardContent.appendChild(cardData);
   cardContent.appendChild(buttonClose);
-  cardContent.appendChild(bottonResultTotal);
+  // cardContent.appendChild(bottonResultTotal);
   //añado los dos en uno solo para poderlos personalizar
-  mainCard.appendChild(cardContent)
+  mainCard.appendChild(cardContent);
 /*-----------------------------------*/
 }
 
