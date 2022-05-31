@@ -55,12 +55,34 @@ body {
   justify-content: center;
 
 }
-
+/*----------Modales----------*/
 #modal{
   display: none;
   width: 50%;
 }
 
+#modalCreateProducts{
+  display: none;
+  width: 40%;
+  border-style: solid;
+  padding: 20px;
+  text-align: center;
+  background-color: #2b2b2b;
+}
+#modalCreateProducts input{
+  margin-bottom: 13px;
+}
+
+.labelCreateProducts{
+  color: #fff;
+  font-size: 14px;
+}
+
+#modalCreateProducts h2{
+  color: #fff;
+  margin-bottom: 20px;
+}
+/*------------------------*/
 
 .navIndex h1{
   color: #fff;
@@ -98,7 +120,10 @@ body {
   border-style: solid;
   margin-bottom: 5px;
   background-color: #2b2b2b;
+  justify-content: space-between;
 }
+
+
 
 .priceCard{
   color: #fff;
@@ -181,6 +206,11 @@ body {
 .buttonCardBuy {
   width: 20%;
   height: 60%;
+}
+
+.containerResult{
+  width: 100%;
+  background-color: #2b2b2b;
 }
 
 

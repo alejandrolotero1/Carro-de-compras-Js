@@ -14,14 +14,25 @@
 </nav>
 
 <nav class="navIndexV2">
-  <button id="buttonModalClass" class="buttonStyle">Tu carro de compras</button>
   <button id="buttonModalClose" class="buttonStyle">Inicio</button>
+  <button id="buttonModalClass" class="buttonStyle">Tu carro de compras</button>
+  <button id="buttonCreateproduct" class="buttonStyle">Crear producto</button>
 </nav>
 
 <div id="modal">
   <div class="shopingCardTitle"><h2>Tu carro de compras</h2>
   </div>
   <main id="containerCards"></main>
+</div>
+
+<div id="modalCreateProducts">
+  <h2 class="crearProductos">Crear productos</h2>
+  <label for="name" class="labelCreateProducts">Nombre del producto</label>
+  <input type="text" maxlength="20" id="nameProduct"><br>
+  <label for="price" class="labelCreateProducts">Precio del producto</label>
+  <input type="number" maxlength="5" id="priceProduct"><br>
+  <input type="file" id="imageProduct" caption="archivos seleccionados">
+  <button id="addProduct">Aceptar</button>
 </div>
 
 <section class="contentEverything" id="inicio">
@@ -35,9 +46,9 @@
             <option value="">Select one option</option>
           </select>
         </div>
+        <main id="renderCards"></main>
       </div>
   </div>
-<!-------------------------------------------------------------------------------->
 </section>
 
 
